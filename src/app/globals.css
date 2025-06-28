@@ -19,7 +19,19 @@
     --accent: 142 76% 36%; /* Indian Green */
     --accent-foreground: 0 0% 98%;
 
-    /* Additional Indian theme colors */
+    /* Niramay Specific Indian theme colors */
+    --niramay-green: 142 76% 36%; /* India Green #2E7D32 */
+    --niramay-saffron: 25 95% 53%; /* Saffron Orange #FF6F00 */
+    --niramay-white: 0 0% 100%; /* Pure White */
+    --niramay-ash: 0 0% 95.7%; /* Ash Gray #F4F4F4 */
+    --niramay-navy: 220 13% 18%; /* Navy for accents */
+
+    /* Status colors for Indian theme */
+    --status-pending: 220 13% 69%; /* Gray for pending */
+    --status-cleaning: 25 95% 53%; /* Orange for cleaning */
+    --status-completed: 142 76% 36%; /* Green for completed */
+    --status-rejected: 0 84.2% 60.2%; /* Red for rejected */
+
     --saffron: 25 95% 53%; /* Saffron Orange */
     --saffron-foreground: 0 0% 98%;
     --ash-gray: 0 0% 95%; /* Form backgrounds */
@@ -88,6 +100,64 @@
   .animate-glow {
     animation: glow 2s ease-in-out infinite alternate;
   }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out;
+  }
+
+  .animate-bounce-in {
+    animation: bounceIn 0.6s ease-out;
+  }
+
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  .gradient-indian {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--niramay-saffron)) 0%,
+      hsl(var(--niramay-green)) 100%
+    );
+  }
+
+  .text-gradient-indian {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--niramay-saffron)),
+      hsl(var(--niramay-green))
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .shadow-indian {
+    box-shadow:
+      0 4px 20px rgba(46, 125, 50, 0.15),
+      0 1px 3px rgba(255, 111, 0, 0.1);
+  }
+
+  .border-indian {
+    border-image: linear-gradient(
+        135deg,
+        hsl(var(--niramay-saffron)),
+        hsl(var(--niramay-green))
+      )
+      1;
+  }
 }
 
 @keyframes float {
@@ -108,6 +178,57 @@
     box-shadow:
       0 0 20px hsl(var(--indian-green)),
       0 0 30px hsl(var(--indian-green));
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 

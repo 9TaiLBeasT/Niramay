@@ -13,7 +13,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/link";
-import { SmtpMessage } from "../smtp-message";
+
 import { signUpAction } from "@/app/actions";
 import Navbar from "@/components/navbar";
 import { UrlProvider } from "@/components/url-provider";
@@ -25,6 +25,11 @@ import {
   Mail,
   Lock,
   CreditCard,
+  Camera,
+  Award,
+  Globe,
+  Heart,
+  AlertTriangle,
 } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 
@@ -123,7 +128,7 @@ export default function Signup() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-orange-50 to-blue-50 relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-orange-50 to-blue-50 relative overflow-hidden animate-fade-in">
         {/* Decorative elements */}
         <div className="absolute top-20 left-20 w-40 h-40 bg-green-200 rounded-full opacity-20 animate-float" />
         <div
@@ -144,13 +149,16 @@ export default function Signup() {
             <div className="text-center space-y-6">
               {/* Illustration placeholder */}
               <div className="w-80 h-64 bg-gradient-to-br from-green-500 to-orange-500 rounded-2xl flex items-center justify-center mb-8 animate-glow">
-                <div className="text-white text-6xl">🇮🇳</div>
+                <div className="flex items-center gap-4">
+                  <Recycle className="w-16 h-16 text-white" />
+                  <div className="text-white text-4xl font-bold">IN</div>
+                </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              <h2 className="text-3xl font-bold text-gray-800 mb-4 leading-tight">
                 स्वच्छ भारत के लिए एक कदम और
               </h2>
-              <p className="text-xl text-gray-700 font-medium">
+              <p className="text-xl text-gray-700 font-medium mb-2">
                 Niramay के साथ जुड़ें!
               </p>
               <p className="text-lg text-gray-600">
@@ -161,19 +169,19 @@ export default function Signup() {
               <div className="space-y-4 mt-8">
                 <div className="flex items-center gap-3 text-gray-700">
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm">📸</span>
+                    <Camera className="w-4 h-4 text-white" />
                   </div>
                   <span>Report waste with AI-powered detection</span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-700">
                   <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm">🏆</span>
+                    <Award className="w-4 h-4 text-white" />
                   </div>
                   <span>Earn eco-points for your contributions</span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-700">
                   <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm">🌍</span>
+                    <Globe className="w-4 h-4 text-white" />
                   </div>
                   <span>Make your city cleaner and greener</span>
                 </div>
@@ -188,26 +196,32 @@ export default function Signup() {
               <div className="flex items-center justify-center gap-3 mb-4">
                 <Recycle className="w-10 h-10 text-green-600" />
                 <h1 className="text-4xl font-bold text-gray-900">Niramay</h1>
-                <span className="text-2xl">🇮🇳</span>
+                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-green-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">IN</span>
+                </div>
               </div>
-              <p className="text-xl text-gray-700 font-medium mb-2">
-                स्वच्छ भारत के लिए एक कदम और
-              </p>
-              <p className="text-lg text-gray-600">Niramay के साथ जुड़ें!</p>
+              <div className="space-y-2">
+                <p className="text-xl text-gray-700 font-medium">
+                  स्वच्छ भारत के लिए एक कदम और
+                </p>
+                <p className="text-lg text-gray-600">Niramay के साथ जुड़ें!</p>
+              </div>
             </div>
 
             {/* Signup Card */}
-            <Card className="w-full max-w-md shadow-2xl border-0 bg-white/95 backdrop-blur-sm">
+            <Card className="w-full max-w-md shadow-2xl border-0 bg-white/95 backdrop-blur-sm animate-scale-in">
               <CardHeader className="text-center pb-4">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <UserPlus className="w-6 h-6 text-green-600" />
-                  <CardTitle className="text-2xl font-bold text-gray-900">
-                    नया खाता बनाएँ
-                  </CardTitle>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-center gap-2">
+                    <UserPlus className="w-6 h-6 text-green-600" />
+                    <CardTitle className="text-2xl font-bold text-gray-900">
+                      नया खाता बनाएँ
+                    </CardTitle>
+                  </div>
+                  <CardDescription className="text-gray-600 text-base">
+                    Register as a Responsible Citizen
+                  </CardDescription>
                 </div>
-                <CardDescription className="text-gray-600 text-base">
-                  Register as a Responsible Citizen
-                </CardDescription>
 
                 {/* Location Detection */}
                 {location && (
@@ -215,10 +229,10 @@ export default function Signup() {
                     <div className="flex items-center gap-2 text-sm text-green-800">
                       <MapPin className="w-4 h-4" />
                       <span className="font-medium">
-                        🔍 आपके क्षेत्र से रजिस्टर कर रहे हैं
+                        आपके क्षेत्र से रजिस्टर कर रहे हैं
                       </span>
                     </div>
-                    <p className="text-xs text-green-700 mt-1">
+                    <p className="text-xs text-green-700 mt-1 truncate">
                       {location.address || `${location.lat}, ${location.lng}`}
                     </p>
                   </div>
@@ -276,9 +290,10 @@ export default function Signup() {
                         <CreditCard className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                       </div>
                       {aadhaar && !isValidAadhaar(aadhaar) && (
-                        <p className="text-xs text-red-600 flex items-center gap-1">
-                          ⚠️ आधार संख्या 12 अंकों की होनी चाहिए
-                        </p>
+                        <div className="flex items-center gap-1 text-xs text-red-600">
+                          <AlertTriangle className="w-3 h-3" />
+                          <span>आधार संख्या 12 अंकों की होनी चाहिए</span>
+                        </div>
                       )}
                     </div>
 
@@ -411,17 +426,21 @@ export default function Signup() {
             </div>
 
             {/* Footer */}
-            <div className="text-center mt-8">
-              <p className="text-sm text-gray-600">
-                🇮🇳 NIRAMAY | स्वच्छ भारत – टेक्नोलॉजी के साथ
-              </p>
-              <p className="text-xs text-gray-500 mt-1">
-                Made with ❤️ in India | Hackathon Edition 2025
-              </p>
+            <div className="text-center mt-8 space-y-2">
+              <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
+                <div className="w-4 h-4 bg-gradient-to-r from-orange-500 to-green-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">IN</span>
+                </div>
+                <span>NIRAMAY | स्वच्छ भारत – टेक्नोलॉजी के साथ</span>
+              </div>
+              <div className="flex items-center justify-center gap-1 text-xs text-gray-500">
+                <span>Made with</span>
+                <Heart className="w-3 h-3 text-red-500 fill-current" />
+                <span>in India | Hackathon Edition 2025</span>
+              </div>
             </div>
           </div>
         </div>
-        <SmtpMessage />
       </div>
     </>
   );

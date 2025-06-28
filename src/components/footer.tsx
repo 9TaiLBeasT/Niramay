@@ -20,11 +20,10 @@ export default function Footer() {
               one report at a time.
             </p>
             <div className="flex items-center gap-2 text-sm">
-              <span className="text-2xl">🇮🇳</span>
-              <span className="text-green-400 font-medium">
-                Made in India with
-              </span>
               <Heart className="w-4 h-4 text-red-400 fill-current" />
+              <span className="text-green-400 font-medium">
+                Made in India with love
+              </span>
             </div>
           </div>
 
@@ -37,7 +36,7 @@ export default function Footer() {
                   href="/dashboard"
                   className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                 >
-                  👤 Citizen Dashboard
+                  Citizen Dashboard
                 </Link>
               </li>
               <li>
@@ -45,7 +44,7 @@ export default function Footer() {
                   href="/sign-up"
                   className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                 >
-                  🧑‍💼 Admin Portal
+                  Admin Portal
                 </Link>
               </li>
               <li>
@@ -53,7 +52,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                 >
-                  👷 Worker App
+                  Worker App
                 </Link>
               </li>
               <li>
@@ -61,7 +60,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                 >
-                  📊 Analytics
+                  Analytics
                 </Link>
               </li>
             </ul>
@@ -76,7 +75,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                 >
-                  📸 Waste Reporting
+                  Waste Reporting
                 </Link>
               </li>
               <li>
@@ -84,7 +83,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                 >
-                  ✅ Task Management
+                  Task Management
                 </Link>
               </li>
               <li>
@@ -92,7 +91,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                 >
-                  🏆 Eco Rewards
+                  Eco Rewards
                 </Link>
               </li>
               <li>
@@ -100,7 +99,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                 >
-                  📈 City Analytics
+                  City Analytics
                 </Link>
               </li>
             </ul>
@@ -115,7 +114,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                 >
-                  📚 Documentation
+                  Documentation
                 </Link>
               </li>
               <li>
@@ -123,7 +122,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                 >
-                  🆘 Help Center
+                  Help Center
                 </Link>
               </li>
               <li>
@@ -131,7 +130,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                 >
-                  👥 Community
+                  Community
                 </Link>
               </li>
               <li>
@@ -139,7 +138,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                 >
-                  🔧 API Guide
+                  API Guide
                 </Link>
               </li>
             </ul>
@@ -154,7 +153,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                 >
-                  🏢 About Niramay
+                  About Niramay
                 </Link>
               </li>
               <li>
@@ -162,7 +161,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                 >
-                  🌱 Sustainability
+                  Sustainability
                 </Link>
               </li>
               <li>
@@ -170,7 +169,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                 >
-                  💼 Careers
+                  Careers
                 </Link>
               </li>
               <li>
@@ -178,7 +177,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                 >
-                  📞 Contact
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -189,7 +188,7 @@ export default function Footer() {
         <div className="bg-gradient-to-r from-green-600/20 to-orange-600/20 rounded-2xl p-6 mb-8">
           <div className="text-center">
             <div className="flex items-center justify-center gap-4 mb-4">
-              <span className="text-4xl">🏛️</span>
+              <Globe className="w-10 h-10 text-blue-400" />
               <div>
                 <p className="text-lg font-semibold text-white">
                   Supporting Swachh Bharat Abhiyan
@@ -253,8 +252,9 @@ export default function Footer() {
 
         {/* Hackathon Credit */}
         <div className="text-center mt-8 pt-6 border-t border-gray-800">
-          <p className="text-xs text-gray-500">
-            🚀 Built for hackathons and civic innovation • Empowering digital
+          <p className="text-xs text-gray-500 flex items-center justify-center gap-2">
+            <Recycle className="w-3 h-3" />
+            Built for hackathons and civic innovation • Empowering digital
             transformation in Indian cities
           </p>
         </div>

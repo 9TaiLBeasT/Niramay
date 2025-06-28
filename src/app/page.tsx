@@ -38,7 +38,7 @@ export default async function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8">
               <span className="inline-flex items-center px-4 py-2 bg-white text-green-800 text-sm font-medium rounded-full shadow-sm">
-                🌟 About Niramay
+                About Niramay
               </span>
             </div>
             <h2 className="text-4xl font-bold mb-8 text-gray-900">
@@ -85,7 +85,7 @@ export default async function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="py-24 bg-white">
+      <section id="how-it-works" className="py-24 bg-white scroll-smooth">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-gray-900">
@@ -98,7 +98,7 @@ export default async function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 animate-slide-up">
             <div className="text-center group hover:scale-105 transition-transform duration-300">
               <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-shadow">
                 <Camera className="w-10 h-10 text-green-600" />
@@ -228,9 +228,7 @@ export default async function Home() {
                 <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
                   <Users className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-green-800">
-                  👤 Citizens
-                </h3>
+                <h3 className="text-2xl font-bold text-green-800">Citizens</h3>
               </div>
               <ul className="space-y-4 text-green-700">
                 <li className="flex items-start gap-3">
@@ -273,7 +271,7 @@ export default async function Home() {
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-blue-800">
-                  🧑‍💼 Municipal Admins
+                  Municipal Admins
                 </h3>
               </div>
               <ul className="space-y-4 text-blue-700">
@@ -317,7 +315,7 @@ export default async function Home() {
                   <Smartphone className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-orange-800">
-                  👷 Field Workers
+                  Field Workers
                 </h3>
               </div>
               <ul className="space-y-4 text-orange-700">
@@ -401,7 +399,9 @@ export default async function Home() {
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-8 h-8 text-white" />
               </div>
-              <div className="text-3xl font-bold mb-2">🇮🇳</div>
+              <div className="text-3xl font-bold mb-2 flex items-center justify-center">
+                <Heart className="w-8 h-8 text-red-500" />
+              </div>
               <div className="text-green-100 text-sm">
                 Supporting Swachh Bharat Abhiyan
               </div>
@@ -411,7 +411,10 @@ export default async function Home() {
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold mb-4">🌟 Our Impact</h3>
+                <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                  <Star className="w-6 h-6 text-yellow-400" />
+                  Our Impact
+                </h3>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-300" />
@@ -432,7 +435,9 @@ export default async function Home() {
                 </ul>
               </div>
               <div className="text-center">
-                <div className="text-6xl mb-4">🏛️</div>
+                <div className="text-6xl mb-4 flex items-center justify-center">
+                  <Globe className="w-16 h-16 text-blue-400" />
+                </div>
                 <p className="text-lg font-medium">Proudly Supporting</p>
                 <p className="text-2xl font-bold text-orange-200">
                   Swachh Bharat Abhiyan
@@ -580,7 +585,7 @@ export default async function Home() {
             <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-12 shadow-2xl">
               <div className="mb-8">
                 <span className="inline-flex items-center px-6 py-3 bg-green-100 text-green-800 text-sm font-medium rounded-full border border-green-200">
-                  🌿 ♻️ Join the Digital Swachh Bharat Mission
+                  Join the Digital Swachh Bharat Mission
                 </span>
               </div>
 
@@ -600,28 +605,28 @@ export default async function Home() {
                   href="/sign-up"
                   className="inline-flex items-center px-8 py-4 text-white bg-green-600 rounded-full hover:bg-green-700 transition-all duration-300 text-lg font-medium shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
                 >
-                  📸 Report Waste
+                  Report Waste
                 </a>
                 <a
                   href="#how-it-works"
                   className="inline-flex items-center px-8 py-4 text-orange-600 bg-white border-2 border-orange-600 rounded-full hover:bg-orange-50 transition-all duration-300 text-lg font-medium shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
                 >
-                  📘 Learn How It Works
+                  Learn How It Works
                 </a>
               </div>
 
               {/* Trust Indicators */}
               <div className="flex flex-col sm:flex-row justify-center items-center gap-8 text-sm text-gray-600">
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl">🌟</span>
+                  <Star className="w-5 h-5 text-yellow-400" />
                   <span className="font-medium">Trusted by 5L+ Indians</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl">🏙️</span>
+                  <Globe className="w-5 h-5 text-blue-400" />
                   <span className="font-medium">150+ Cities</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl">🎯</span>
+                  <Target className="w-5 h-5 text-green-400" />
                   <span className="font-medium">92% Success Rate</span>
                 </div>
               </div>

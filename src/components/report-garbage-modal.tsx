@@ -19,7 +19,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Camera, MapPin, Upload, X } from "lucide-react";
+import { Camera, MapPin, Upload, X, CheckCircle, Heart } from "lucide-react";
 import { createClient } from "../../supabase/client";
 
 interface ReportGarbageModalProps {
@@ -257,11 +257,15 @@ export default function ReportGarbageModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle>Report Garbage</DialogTitle>
-          <DialogDescription>
-            Help keep your city clean by reporting garbage issues
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-green-50 to-orange-50">
+        <DialogHeader className="text-center">
+          <DialogTitle className="text-2xl font-bold text-gradient-indian flex items-center justify-center gap-2">
+            <Camera className="w-6 h-6 text-green-600" />
+            Report Garbage
+          </DialogTitle>
+          <DialogDescription className="text-gray-700 text-base">
+            Help keep your city clean by reporting garbage issues • स्वच्छ भारत
+            में योगदान दें
           </DialogDescription>
         </DialogHeader>
 
@@ -351,8 +355,9 @@ export default function ReportGarbageModal({
                 {location ? "Location Captured" : "Get Current Location"}
               </Button>
               {location && (
-                <span className="text-sm text-green-600">
-                  ✓ {location.address || `${location.lat}, ${location.lng}`}
+                <span className="text-sm text-green-600 flex items-center gap-1">
+                  <CheckCircle className="w-3 h-3" />
+                  {location.address || `${location.lat}, ${location.lng}`}
                 </span>
               )}
             </div>
@@ -397,17 +402,32 @@ export default function ReportGarbageModal({
           </div>
 
           {/* Submit Button */}
-          <div className="flex gap-2 pt-4">
+          <div className="flex gap-2 pt-6">
             <Button
               onClick={handleSubmit}
               disabled={loading || !title || !photo || !location}
-              className="flex-1"
+              className="flex-1 h-12 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200"
             >
               {loading ? "Submitting..." : "Submit Report"}
             </Button>
-            <Button onClick={handleClose} variant="outline">
+            <Button
+              onClick={handleClose}
+              variant="outline"
+              className="h-12 px-6"
+            >
               Cancel
             </Button>
+          </div>
+
+          {/* Motivational Footer */}
+          <div className="text-center pt-4 border-t border-gray-200 mt-4">
+            <p className="text-sm text-gray-600 flex items-center justify-center gap-2">
+              <Heart className="w-4 h-4 text-red-500" />
+              <span className="font-medium text-green-700">
+                Every report makes India cleaner!
+              </span>
+              • हर रिपोर्ट भारत को स्वच्छ बनाती है
+            </p>
           </div>
         </div>
       </DialogContent>

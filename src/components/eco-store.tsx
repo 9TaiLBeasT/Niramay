@@ -190,21 +190,22 @@ export default function EcoStore({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="flex items-center gap-2">
-            <ShoppingCart className="w-5 h-5" />
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-yellow-50 to-green-50">
+        <DialogHeader className="text-center">
+          <DialogTitle className="text-2xl font-bold text-gradient-indian flex items-center justify-center gap-2">
+            <ShoppingCart className="w-6 h-6 text-orange-600" />
             Eco Store
           </DialogTitle>
-          <DialogDescription>
-            Redeem your eco-points for sustainable products
+          <DialogDescription className="text-gray-700 text-base">
+            Redeem your eco-points for sustainable products • अपने इको-पॉइंट्स
+            का उपयोग करें
           </DialogDescription>
         </DialogHeader>
 
-        <div className="mb-4">
-          <div className="flex items-center gap-2 p-3 bg-green-50 rounded-lg">
-            <Award className="w-5 h-5 text-green-600" />
-            <span className="font-semibold text-green-800">
+        <div className="mb-6">
+          <div className="flex items-center justify-center gap-3 p-4 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-xl border-2 border-yellow-200">
+            <Award className="w-6 h-6 text-orange-600" />
+            <span className="text-xl font-bold text-orange-800">
               Available Points: {userPoints}
             </span>
           </div>
